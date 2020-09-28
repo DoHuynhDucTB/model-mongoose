@@ -1,0 +1,23 @@
+{
+  "name": "model-mongoose",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DoHuynhDucTB/model-mongoose.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DoHuynhDucTB/model-mongoose/issues"
+  },
+  "homepage": "https://github.com/DoHuynhDucTB/model-mongoose#readme",
+  "dependencies": {
+    "mongoose": "^5.10.7"
+  }
+}
