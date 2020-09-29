@@ -60,11 +60,29 @@ const Comment = mongoose.model("Comment", CommentSchema, "Comment")
 // .then(console.log)
 // .catch(err => console.log)
 
+// const comment4 = new Comment({
+//     postId: newPost._id,
+//     username: "name 4",
+//     content: "content comment 4"
+// })
+// comment4.save()
+// .then(console.log)
+// .catch(err => console.log)
+
+// const comment5 = new Comment({
+//     postId: newPost._id,
+//     username: "name 5",
+//     content: "content comment 5"
+// })
+// comment5.save()
+// .then(console.log)
+// .catch(err => console.log)
+
 Comment.aggregate()
 .facet({
     post: [
         {
-            $skip: 2
+            $skip:2
         },
         {
             $limit:2
@@ -75,9 +93,7 @@ Comment.aggregate()
                 groupBy: '$postId',
                 buckets: 2,
                 output: {
-                    comments: {$push: {
-                        content: '$content'
-                    }}
+                    comments: {$push: { content: '$content' }}
                 }
             }
         }
